@@ -1,0 +1,35 @@
+<style>
+	.field{
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		font-family: arial;
+		font-size: 20px;
+	}
+	
+	#printContent{
+		height: auto;
+		height: auto;
+		page-break-after: avoid;
+	}
+</style>
+
+<div id="printContent">
+	<div class="panel" style="width: 930px; margin: 5px auto;">
+		<div class="panel-body">
+			<fieldset>
+				<label class="field">NAME:&nbsp;{full_name}</label>
+			</fieldset>
+			<fieldset>
+				<label class="field">ID#&nbsp;{card_id}</label>
+			</fieldset>
+			<fieldset>
+				<label class="field">BIN#&nbsp;{card_bin}</label>
+				&nbsp;
+				<label class="field">GROUP#&nbsp;{group_number}</label>
+				&nbsp;
+				<label class="field"><br>Pharmacy Help<br>{pharmacy_help}</label>
+			</fieldset>
+		</div>
+	</div>
+</div>
