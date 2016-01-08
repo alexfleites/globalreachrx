@@ -1,0 +1,182 @@
+
+
+.styler{
+padding:5px;
+border:1px solid #ddd;
+font-size:16px;
+color:#333;
+background-image: linear-gradient(bottom, rgb(242,245,245) 0%, rgb(255,255,255) 72%);
+background-image: -o-linear-gradient(bottom, rgb(242,245,245) 0%, rgb(255,255,255) 72%);
+background-image: -moz-linear-gradient(bottom, rgb(242,245,245) 0%, rgb(255,255,255) 72%);
+background-image: -webkit-linear-gradient(bottom, rgb(242,245,245) 0%, rgb(255,255,255) 72%);
+background-image: -ms-linear-gradient(bottom, rgb(242,245,245) 0%, rgb(255,255,255) 72%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(242,245,245)),
+	color-stop(0.72, rgb(255,255,255))
+);
+position:relative;
+z-index:2;	
+}
+
+.left{text-align:left; text-transform:uppercase;}
+
+#hezewraper > .container {
+  padding: 10px 15px 0;
+}
+
+
+
+/*NOTIFICATION MESSAGES*/
+.heze-notify {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    width: 100%;
+	margin-top:-5px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #fff;
+    z-index:9999;
+    color: #FFF;
+	border-radius:0px;
+   background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,0.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,0.15)),color-stop(0.75,rgba(255,255,255,0.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+   background-size:40px 40px;
+}
+
+.heze-notify .inner {
+    position: relative;
+    width: 100%;
+    margin:  0 auto;
+	padding:5px;
+}
+
+.heze-notify .close {
+    position: absolute;
+    color: #000;
+    top: 5px;
+    right: 5px;
+}
+
+.heze-notify a.close:hover {
+    text-decoration: none;
+}
+
+/*LOGIN*/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/*PAGINATION*/
+ul.hezpaging{
+	margin:0px;
+	padding:0px;
+	height:100%;
+	overflow:hidden;
+	font:12px 'Tahoma';
+	list-style-type:none;	
+}
+
+ul.hezpaging li.details{
+    padding:3px 10px 3px 10px;
+    font-size:14px;
+}
+
+ul.hezpaging li.dot{padding: 3px 0;}
+
+ul.hezpaging li{
+	float:left;
+	margin:0px;
+	padding:0px;
+	margin-left:0px;
+}
+
+ul.hezpaging li:first-child{
+	margin-left:0px;
+}
+
+ul.hezpaging li a{
+	color:black;
+	display:block;
+	text-decoration:none;
+	padding:3px 10px 3px 10px;
+}
+
+ul.hezpaging li a img{
+	border:none;
+}
+ul.hezpaging li.details{
+   color:#888888;
+}
+
+ul.hezpaging li a
+{
+	color:#FFFFFF;
+	border-radius:0px;	
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+}
+
+ul.hezpaging li a
+{
+	color:#474747;
+	border:solid 1px #B6B6B6;
+	padding:5px 12px 5px 12px;
+	background:#E6E6E6;
+	background:-moz-linear-gradient(top,#FFFFFF 1px,#F3F3F3 1px,#E6E6E6);
+	background:-webkit-gradient(linear,0 0,0 100%,color-stop(0.02,#FFFFFF),color-stop(0.02,#F3F3F3),color-stop(1,#E6E6E6));
+}	
+
+ul.hezpaging li a:hover,
+ul.hezpaging li a.current
+{
+	background:#FFFFFF;
+}
+
+ .choz{width:100%;}
+
+/* RESPONSIVE CSS---------- */
+.phone-navigation {
+  display: none;
+  padding: .5em 0em;
+}
+.heze-container h4{display:none;}
+
+/*SEARCH SUGGEST*/
+.autosearch{padding:10px; margin:-10px 0 30px -10px;}
+.s-absolute{padding:0; position:absolute; z-index:999;}

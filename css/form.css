@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body
+{
+	font-family:font-family: 'Lato', sans-serif; 
+	
+}
+
+.left-inner-icon {
+    position: relative;
+}
+.left-inner-icon input {
+    padding-left: 30px;    
+}
+.left-inner-icon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+	color:#ccc;
+}
+
+.right-inner-icon {
+    position: relative;
+}
+.right-inner-icon input {
+    padding-right: 30px;    
+}
+.right-inner-icon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.has-warning .fa
+{
+	color:#8A6D3B;
+}
+
+.has-error .fa
+{
+	color:#A94442;
+}
+
+.has-success .fa
+{
+	color:#77B300;
+}
+
+.form-control:focus, .form-control
+{
+	box-shadow:none !important;
+	border-radius:0px !important;
+}
+
+.form-title
+{
+	border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+	margin-bottom:15px !important;
+}
+
+.colorgraph2
+{
+   height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background:#76C7C0;
+}
+
+
+
+.quick .panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+	.quick .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+	.quick .btn-labeled {padding-top: 0;padding-bottom: 0;}
+	.quick .input-group { margin-bottom:10px; }
+	.quick .separator { border-right: 1px solid #dfdfe0; }
+	.quick .fb-btn{ min-width:170px;padding-top:10px;padding-bottom:10px; }
+	.quick .tw-btn{ min-width:170px;padding-top:10px;padding-bottom:10px; }
+	.quick .fb-btn { background-color:#354E84;color:#fff; }
+	.quick .tw-btn { background-color:#00A5E3;color:#fff; }
+	.quick .tw-btn:hover { color:#fff; }
+	.quick .fb-btn:hover { color:#fff; }
+	.quick .fb-btn .fa, .quick .tw-btn .fa {padding-right:10px;font-size:20px;}
+
+.check-box .panel-body:not(.two-col) { padding:0px }
+.check-box .fa { margin-right:5px; }
+.check-box .panel-body .radio,.panel-body .checkbox {margin-top: 0px;margin-bottom: 0px;}
+.check-box .panel-body .list-group {margin-bottom: 0;}
+.check-box .margin-bottom-none { margin-bottom: 0; }
+.check-box .panel-body .radio label,.check-box .panel-body .checkbox label { display:block; }
