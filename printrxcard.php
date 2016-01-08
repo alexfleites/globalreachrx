@@ -1,5 +1,5 @@
 <?php
-	$site = $_REQUEST['site'];
+	$site = $_REQUEST['site']; //get from which site comes from
 
 	$conn = mysql_connect("localhost", "lobalre3_printrx", "TI46Tl8@EP0{") or die("Can not connect to the server");
 	$db = mysql_select_db("lobalre3_printrxcard") or die("Can not connect to the database");
