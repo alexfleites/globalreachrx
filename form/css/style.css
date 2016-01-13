@@ -10,12 +10,12 @@
   border-radius: 20px;
   box-shadow: 0 0 5px #ddd;
   margin: 100px auto 0;
-  margin-top:20px;
+  margin-top: 20px;
   min-height: 493px;
-  width: 700px;
+  width: 596px;
 }
 .card-bottom {
-	width: 700px;
+	width: 596px;
 	margin: 0px auto;
 	position: relative;
 }
@@ -91,11 +91,6 @@
 	font-weight: 300;
 }
 /* select plceholder */
-
-
-
-
-
 .info input {
 	background: transparent none repeat scroll 0 0;
 	border-color: #ddd;
@@ -208,7 +203,7 @@
 }
 
 .terms {
-  /*background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;*/
+  background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;
   float: left;
   margin: 0;
   padding: 10px 20px;
@@ -271,7 +266,7 @@
 
 .card-buttons {
   margin: 15px auto;
-  width: 700px;
+  width: 596px;
 }
 .H-card.Rx-card {
   min-height: 375px;
@@ -369,7 +364,7 @@
   margin-bottom: 8px;
 }
 .reach-terms {
-/*   background: rgba(0, 0, 0, 0) url("../images/reach-footer-logo.png") no-repeat scroll 97% center; */
+  background: rgba(0, 0, 0, 0) url("../images/reach-footer-logo.png") no-repeat scroll 97% center;
   float: left;
   margin: 0;
   padding: 10px 20px;
@@ -385,6 +380,38 @@
   padding-left: 15px;
 }
 
+/* Dashd Border
+------------------------------- */
+/*
+.card-wrap::before {
+    content: url("../images/icon-scissor.png");
+    left: 45px;
+    opacity: 0.6;
+    position: absolute;
+    top: -28px;
+}
+*/
+.card-wrap {
+    border: 2px dashed gray;
+    border-radius: 15px;
+	background: rgba(0, 0, 0, 0) url('../images/back-scissor.png') no-repeat center;
+    margin: 100px auto;
+    margin-bottom: 20px;
+    padding: 50px 30px 30px;
+    margin-top: 30px;
+    position: relative;
+    width: 716px;
+    z-index: 99;
+}
+.card-wrap .H-card.Rx-card {
+    margin: 0 auto;
+}
+.card-wrap .card-buttons button {
+    margin-bottom: 0;
+}
+
+/* Dashd Border Ends
+------------------------------- */
 
 
 @media only screen and (max-width: 1199px) {
@@ -503,6 +530,24 @@
   width: 70%;
   font-size: 18px;
 }
+/* Dashd Border
+------------------------------- */
+.card-wrap::before {
+	display: none;
+}
+.card-wrap {
+    border: 0;
+    margin: 100px auto;
+    padding:0;
+    position: relative;
+    width: 100%;
+}
+.card-wrap .card-buttons button {
+    margin-bottom: 15px;
+}
+
+/* Dashd Border Ends
+------------------------------- */
 
 }
 @media only screen and (max-width: 635px) {

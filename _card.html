@@ -2,15 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta charset="utf-8">
 <!-- Mobile-friendly viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <title>{title}</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href="form/css/style.css" rel="stylesheet" type="text/css">
+<link href="form/css/style.css" media="all" rel="stylesheet" type="text/css">
+
+<script>
+function printPage() {
+    window.print();
+}	
+</script>
+
 </head>
+
+<body>
 
 <style>
 	.field{
@@ -21,45 +29,49 @@
 		font-size: 20px;
 	}
 	
+	#printContent{
+		height: auto;
+		height: auto;
+		page-break-after: avoid;
+	}
+	
 	a:link, a:active, a:hover{
 		color: white;
 		text-decoration: none;
 	}
-	.card-wrap::before {
-	    content: url("form/images/icon-scissor.png");
-	    left: 45px;
-	    opacity: 0.6;
-	    position: absolute;
-	    top: -28px;
-	}
-
 </style>
 
-<body>
-<div class="healthcard_Sec">
-  <div class="card-wrap">
-    <div class="H-card Rx-card">
-      <div class="logo-sec"> {logo} </div>
-      <div class="discount-card">
-        <h1>{subtitle}</h1>
-      </div>
-      <div class="U-info">
-        <div class="information">
-          <label>Name</label><br>
-          <span>{full_name}</span> </div>
-        <div class="information">
-          <label>Bin#</label><br>
-          <span>{card_bin}</span> </div>
-        <div class="information">
-          <label>ID #</label><br>
-          <span>{card_id}</span> </div>
-        <div class="information">
-          <label>Group#</label><br>
-          <span>{card_group}</span> </div>
-      </div>
-      <div class="save-up rx"> {slogan} <br/>
-        <span class="Help">{pharmacy_help} (888) <span>723</span>-6004</span> </div>
-	    <div class="terms reach-terms" {style_background}>
+<div id="printContent" class="healthcard_Sec">
+   <div class="card-wrap">
+	  <div class="H-card Rx-card">
+	    <div class="logo-sec"> {logo} </div>
+	    <div class="discount-card">
+	      <h1>{subtitle}</h1>
+	    </div>
+	    <div class="U-info">
+	     <div class="information">
+	         <label>Name</label><br>
+	         <span>{full_name}</span>
+	        </div>
+	        <div class="information">
+	         <label>Bin#</label><br>
+	         <span>{card_bin}</span>
+	        </div>
+	        <div class="information">
+	         <label>ID #</label><br>
+	         <span>{card_id}</span>
+	        </div>
+	        <div class="information">
+	         <label>Group#</label><br>
+	         <span>{card_group}</span>
+	        </div>
+	    </div>
+	    <div class="save-up rx">
+	    {slogan}
+	    <br/>
+	    <span class="Help">{pharmacy_help} (888) <span>723</span>-6004</span>
+	    </div>
+	    <div class="terms" {style_background}>
 		    <table style="width:95%">
 			    <tr>
 				    <td style="width: 3%; font-size: 13px;"><img src="form/images/list-icon.png"></td>
@@ -76,11 +88,11 @@
 			    </tr>
 		    </table>
 	   </div>
-      <div class="clear"></div>
-    </div>
-  </div>
+	    <div class="clear"></div>
+	  </div>
+   </div>
 </div>
-<!-- <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>  -->
+<!-- <script src="form/js/jquery-2.1.4.min.js" type="text/javascript"></script>  -->
 <script>
 function colorSet(){
     document.getElementById('selection').style.color="#242424";

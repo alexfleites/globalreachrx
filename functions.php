@@ -106,6 +106,9 @@
 	function fill_card($card, $site){
 
 		$html = $card; //get card content
+		
+		//$html = str_replace('<div class="card-wrap">', '<img src="form/images/icon-scissor.png" style="left: 45px; opacity: 0.6; position: absolute; margin-top: 40px;"><div class="card-wrap">', $html);
+		
 		if($site == 'globalreachhealth'){
 			$html = str_replace("{title}", "Global Reach Health", $html);
 			$html = str_replace("{logo}", "<img src='form/images/ReachLogo.png' alt=''/>", $html);

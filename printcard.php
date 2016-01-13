@@ -20,6 +20,7 @@
 			$full_name = $row['first_name'] . ' ' . $row['last_name'];
 			$query = mysql_query("SELECT * FROM cards WHERE id_patient = {$id}");
 			if($row = mysql_fetch_array($query)){
+				$cssFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/form/css/style.css";
 				$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
 				$html = file_get_contents($htmlFileLocation); 
 				$html = fill_card($html, $site);
@@ -27,6 +28,7 @@
 				$html = str_replace("{card_id}", $row['card_id'], $html); //card_id
 				
 				//output pdf file
+				//$mpdf->WriteHTML($html,1);
 				$mpdf->WriteHTML($html);
 				$mpdf->Output();
 			}

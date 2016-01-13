@@ -129,7 +129,7 @@
 					?>
 					<div class="clear"></div>
 					<div class="card-buttons" style="margin-top: 30px;">
-						<center><a class="print-btn" onmouseover="return false;" href="javascript:window.open('printcard.php?pid=<?php echo $id?>&site=<?php echo $site?>', 'Print', 'width=800,height=500')" style="margin-bottom: 20px; text-decoration: none;">Print</a>
+						<center><a class="print-btn" onmouseover="return false;" href="javascript:window.open('printcard.php?pid=<?php echo $id?>&site=<?php echo $site?>', 'Print', 'width=800,height=700')" style="margin-bottom: 20px; text-decoration: none;">Print</a>
 						<a class="email-btn" onmouseover="return false;" onclick="mailcard('<?php echo $id?>');" style="margin-bottom: 20px; text-decoration: none;">Email</a>
 						<a class="save-pdf-btn" onmouseover="return false;" href="download.php?f=<?php echo $card_file?>" style="margin-bottom: 20px; text-decoration: none;">Save to pdf </a></center>
 					</div>
