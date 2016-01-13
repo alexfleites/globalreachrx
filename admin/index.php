@@ -180,7 +180,7 @@
             include(APP_FOLDER.'/controllers/admin/main.php');
             include('libraries/controllers/system_users.php');
       		}else{
-      		  send_to('index.php?pg=admin&view=patients&do=viewall'); ?>
+      		  send_to('index.php?pg=admin&view=patients&do=viewall&active=1'); ?>
 		      <?php }?>
         <!-- /DESIGN AREA -->
         

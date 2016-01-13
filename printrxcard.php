@@ -6,7 +6,8 @@
 	
 	include($_SERVER['DOCUMENT_ROOT'] . "/printrxcard/functions.php");
 	include($_SERVER['DOCUMENT_ROOT'] . "/printrxcard/mpdf/mpdf.php");
-	$mpdf = new mPDF('utf-8', 'A3');
+	$mpdf = new mPDF('utf-8', 'A4');
+	$mpdf->restrictColorSpace = 3;
 	$mpdf->SetDisplayMode('fullpage');
 ?>
 
@@ -15,14 +16,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta charset="utf-8">
 <!-- Mobile-friendly viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <title><?php echo ($site == "globalreachhealth" ? "GlobalReachHealth" : "GlobalReachRX")?></title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href="css/bootstrap.css" rel="stylesheet">
+<link href="form/css/bootstrap.min.css" rel="stylesheet">
 <link href="form/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -71,7 +71,7 @@
 			$sql = "SELECT * FROM patients WHERE email = '$email'";
 			$res = mysql_query($sql);
 			if(mysql_num_rows($res) > 0){
-				array_push($error, "Email already registered, try different!");
+				array_push($error, "Email already registered, try different email!");
 			}else{
 				//insert new patient
 				$sql = "INSERT INTO patients (first_name, last_name, phone, email, source, notes, date)
@@ -83,24 +83,22 @@
 					$card_id = get_last_id("card_id", "cards");
 					$card_file =  $card_id . ".pdf";
 					//replace information on html
-					$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/card.html";
+					$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
 					$html = file_get_contents($htmlFileLocation);
+					$html = fill_card($html, $site);
 					$html = str_replace("{full_name}", $first_name . ' ' . $last_name, $html); //ful_name
 					$html = str_replace("{card_id}", $card_id, $html); //card_id
-					$html = str_replace("{card_bin}", uniqid(), $html); //card_bin
-					$html = str_replace("{group_number}", uniqid(), $html); //group_number
-					$html = str_replace("{pharmacy_help}", "(877) 459-8474", $html); //pharmacy_help
 
-					$mpdf->WriteHTML($html);
-					$outputFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/files/{$card_file}";
 					//output pdf file
+					$mpdf->WriteHTML($html);
+					$outputFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/{$card_file}";
 					$mpdf->Output($outputFileLocation, 'F');
 					//save card
 					mysql_query("INSERT INTO cards (card_id, id_patient, card, date)
 						VALUES('{$card_id}', '{$id}', '{$outputFileLocation}', NOW())");					
 					//clear POST
 				}
-				$location = "card.php?pid=" . $id;
+				$location = "card.php?pid=" . $id . "&site=" . $site;
 				header("Location: {$location}");
 			}?>
 <?php	} //end count(error) == 0?>
@@ -123,24 +121,28 @@
 		}
 	?>
   <div class="H-card">
+	<?php if($site == "globalreachhealth"){?>
+    <div class="logo-sec"> <img src="http://www.globalreachhealth.com/wp-content/uploads/2016/01/logo-1.png" alt=""/> </div>
+	<?php }else{?>
     <div class="logo-sec"> <img src="form/images/logo.png" alt=""/> </div>
+    <?php } //end if ?>
     <div class="discount-card">
-      <h1>pharmacy discount card</h1>
+      <h1><?php echo ($site == 'globalreachhealth' ? "start saving now" : "pharmacy discount card")?></h1>
     </div>
     <div class="inpt-flds">
       <h1> Enter your information</h1>
            <div class="info">
-          <input type="text" id="first_name" name="first_name" class="form-control" id="exampleInputEmail3" placeholder="First Name" value="<?php echo $_POST['first_name']?>">
+          <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" value="<?php echo $_POST['first_name']?>">
         </div>
         <div class="info">
-          <input type="text" id="last_name" name="last_name" class="form-control" id="exampleInputPassword3" placeholder="Last Name"<?php echo $_POST['last_name']?>>
+          <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" value="<?php echo $_POST['last_name']?>">
         </div>
      
         <div class="info">
-          <input type="text" id="phone_number" name="phone_number" class="form-control" id="exampleInputPassword3" placeholder="Phone Number" value="<?php echo $_POST['phone_number']?>">
+          <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="Phone Number" value="<?php echo $_POST['phone_number']?>">
         </div>
         <div class="info">
-          <input type="text" id="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email" value="<?php echo $_POST['email']?>">
+          <input type="text" id="email" name="email" class="form-control" placeholder="Email" value="<?php echo $_POST['email']?>">
         </div>
         <div class="slct">
            <select id="country" name="country" class='css-select'>
@@ -167,6 +169,16 @@
         </div>
       
     </div>
+	<?php if($site == "globalreachhealth"){?>
+    <div class="save-up">
+	Save up to 75% on 50,000 drugs and medical services worldwide.
+    </div>
+    <ul class="terms">
+	    <li>This card is not insurance.  </li>
+		<li>You will not be denied medication(s) due to pre-existing condition(s).</li>
+		<li>Present this card to your local pharmacy and/or clinical to save on prescriptions and<br>medical services.</li>
+    </ul>
+	<?php }else{?>
     <div class="save-up">
     Save up to 75% on 50,000 drugs at over 60,000 pharmacies
     </div>
@@ -175,12 +187,13 @@
 		<li>You will not be denied medication(s) due to pre-existing condition(s).</li>
 		<li>Present this card to your local pharmacy to save on your prescriptions.</li>
     </ul>
+    <?php } //end if ?>
     <div class="clear"></div>
   </div>
   <div class="card-bottom">
   <p>By submitting this form, I confirm that I am at least 18 years old.  
   I agree to the privacy policy and terms and conditions.  I also agree to be contacted
-   via phone and/or email by Global Reach Rx in case I need help in obtaining medication(s).</p>
+   via phone and/or email by <?php echo ($site == "globalreachhealth" ? "Global Reach Health" : "Global Reach Rx")?> in case I need help in obtaining medication(s).</p>
    <button type="submit" class="create-btn">create my card</button>
   </div>
 </div>

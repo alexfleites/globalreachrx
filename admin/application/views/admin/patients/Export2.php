@@ -38,10 +38,6 @@
 	<td>'.$rows->source.'</td>
   	</tr>
     <tr>
-	<td>Notes</td>
-	<td>'.$rows->notes.'</td>
-  	</tr>
-    <tr>
 	<td>Date</td>
 	<td>'.$date->format('m/d/Y').'</td>
   	</tr>';

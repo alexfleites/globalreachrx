@@ -1,7 +1,6 @@
-
 <?
 	
-	if(isset($_REQUEST['F'])){
+	if(isset($_REQUEST['f'])){
 		$file = $_REQUEST["f"];
 	}else{
 		//get file by patient_id

@@ -25,7 +25,7 @@
 	
 	public function invoke_patients()
 	{
-	$active = (isset($_GET['active']) ? $_GET['active'] : NULL);
+	$active = (isset($_GET['active']) ? $_GET['active'] : "1");
 	//SELECT ALL //////////////////////////////////	
 	if(get('do')=='viewall'){
 	if(PAGINATION_TYPE=='Normal'){

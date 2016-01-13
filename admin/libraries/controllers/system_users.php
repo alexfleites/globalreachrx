@@ -139,7 +139,7 @@
 			$_SESSION[H_USER_SESSION] =  $login;
 			$haccess->UpdateLastLogin(date('Y-m-d'),$_SERVER['REMOTE_ADDR'],$haccess->UserID());
 			json_send(H_ADMIN);
-			json_success('Loggin in');
+			json_success('Logging in');
 			exit();
 		}
 	}

@@ -21,8 +21,8 @@
                <h3 class="box-title">Patients</h3>
                 <ul class="nav pull-right">
 
-	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?> New Patient</a>
-	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=printer" target="_blank" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_PRINT;?>"><i class="fa fa-print"></i> <?php echo LANG_PRINT;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?> New Patient</a>
+	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=printer" target="_blank" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_PRINT;?>"><i class="fa fa-print"></i> <?php echo LANG_PRINT;?></a>
 	<!-- <a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=excel" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_EXCEL;?>"><i class="fa fa-table"></i> <?php echo LANG_EXCEL;?></a>
 	 <a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=word" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_WORD;?>"><i class="fa fa-file-o"></i> <?php echo LANG_WORD;?></a>
 	<a href="<?php echo H_ADMIN;?>&view=patients&do=truncate" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_TRUNCATE;?>" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_TRUNCATE;?></a> -->
@@ -30,20 +30,29 @@
 	
 	 </div><!-- /.box-header -->
    <div class="box-body">
-   
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	$('#btn_search').css('pointer-events', 'none');
+
+});
+
+</script>   
+
    <!--AUTO COMPLETE-->
   	<div class="col-md-3 autosearch">
     	<div class=" s-absolute">
             <div class="input-group">
               <input type="text" class="form-control input-sm styler" id="inputString" onkeyup="lookup(this.value);"  placeholder="search by name" autocomplete="off">
               <span class="input-group-btn">
-                <button class="btn btn-default btn-sm" type="button"><span class="fa fa-search"></span></button>
+                <button id="btn_search" class="btn btn-sm" type="button" style="background:#f7f7f7; border: solid 1px #d3d3d3; cursor: default;" onclick="javascript:return false;"><span class="fa fa-search"></span></button>
               </span>
             </div><!-- /input-group -->
             <div id="suggestions"></div>
       	</div>
      </div><!--/col-lg-3--> 
-     <div class="col-md-3">
+     <div class="col-md-4">Filter:&nbsp;
      	<a class="btn btn-primary" href="<?php echo H_ADMIN;?>&view=patients&do=viewall">View All</a>
      	<a class="btn btn-success" href="<?php echo H_ADMIN;?>&view=patients&do=viewall&active=1">Active</a>
      	<a class="btn btn-danger" href="<?php echo H_ADMIN;?>&view=patients&do=viewall&active=0">Inactive</a>
@@ -69,8 +78,8 @@
 			{
 	?>
 	<tr>
-	<td><a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update"><?php echo $rows->first_name;?></a></td>
-	<td><?php echo $rows->last_name;?></td>
+	<td><a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"><?php echo $rows->first_name;?></a></td>
+	<td><a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"><?php echo $rows->last_name;?></a></td>
 	<td><?php echo $rows->phone;?></td>
 	<td><?php echo $rows->email;?></td>
 	<td><?php echo $rows->source;?></td>

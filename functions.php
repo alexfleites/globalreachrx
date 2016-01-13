@@ -41,6 +41,10 @@
 		}
 		return $str;
 	}
+	/* detect if is surfing in mobile device */
+	function isMobile() {
+		return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+	}
 	/* Format Phone Number */
 	function formatPhoneNumber($str=""){
 		if($str != ""){
@@ -97,6 +101,32 @@
 			$my_message = "Hallo,\r\ndo you like this script? I hope it will help.\r\n\r\ngr. Olaf";
 			mail_attachment($my_file, $my_path, "recipient@mail.org", $my_mail, $my_name, $my_replyto, $my_subject, $my_message);
 		*/
+	}
+	/* Fill design elements in card */
+	function fill_card($card, $site){
+
+		$html = $card; //get card content
+		if($site == 'globalreachhealth'){
+			$html = str_replace("{title}", "Global Reach Health", $html);
+			$html = str_replace("{logo}", "<img src='form/images/ReachLogo.png' alt=''/>", $html);
+			$html = str_replace("{subtitle}", "health discount card", $html);
+			$html = str_replace("{pharmacy_help}", "Helpline", $html);
+			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs and medical services worldwide.", $html);
+			$html = str_replace("{card_present}", "Present this card to your local pharmacy and/or clinical to save on your prescriptions and medical services.", $html);
+			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/footer-logo.png) no-repeat scroll 97% center;'", $html);
+		}else{
+			$html = str_replace("{title}", "Global Reach RX", $html);
+			$html = str_replace("{logo}", "<img src='form/images/logo.png' alt=''/>", $html);
+			$html = str_replace("{subtitle}", "start saving now", $html);
+			$html = str_replace("{pharmacy_help}", "Pharmacy Help", $html);
+			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs at over 50,000 pharmacies", $html);
+			$html = str_replace("{card_present}", "Present this card to your local pharmacy to save on your prescriptions.", $html);
+			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/reach-footer-logo.png) no-repeat scroll 97% center;'", $html);
+		}
+		$html = str_replace("{card_bin}", "016912", $html); //card_bin
+		$html = str_replace("{card_group}", "550004", $html); //card_group
+		return $html;
+		
 	}
 
 ?>

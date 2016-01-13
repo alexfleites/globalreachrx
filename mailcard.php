@@ -18,7 +18,7 @@
 		$mail->From = "info@globalreachrx.com";
 		$mail->FromName = "Global Reach RX";
 	}
-	$id = $_POST['pid'];
+	$id = $_GET['pid'];
 	if($id > 0){
 		$query = mysql_query("SELECT * FROM patients WHERE id = {$id}"); // AND active = 1
 		if($row = mysql_fetch_array($query)){
@@ -26,7 +26,7 @@
 			$email = $row['email'];
 			$query = mysql_query("SELECT * FROM cards WHERE id_patient = {$id}");
 			if($row = mysql_fetch_array($query)){
-				$card_file = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/files/". $row['card_id'] . ".pdf";
+				$card_file = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/". $row['card_id'] . ".pdf";
 
 				//To address and name
 				$mail->addAddress($email, $full_name);

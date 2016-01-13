@@ -24,7 +24,6 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Source</th>
-      <th>Notes</th>
       <th>Date</th>
   </tr>
   ';
@@ -37,7 +36,6 @@
 	<td>'.format_phone_number($rows->phone).'</td>
 	<td>'.$rows->email.'</td>
 	<td>'.$rows->source.'</td>
-	<td>'.$rows->notes.'</td>
 	<td>'.$date->format('m/d/Y').'</td>
 	</tr>';
 	}

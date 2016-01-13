@@ -19,17 +19,17 @@
     <h3 class="box-title">Patients</h3>
    <ul class="nav pull-right">
 	<input type="hidden" id="pid" value="<?php echo $rows->id;?>">		
-	<a href="<?php echo H_ADMIN;?>&view=patients&do=viewall" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_VIEWALL;?>"><i class="fa fa-reply"></i> <?php echo LANG_GO_BACK;?></a>
-	
 <!-- 	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?></a> -->
 	
-	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" title="<?php echo LANG_TIP_UPDATE;?> Record" class="btn btn-default btn-xs tip"><i class="fa fa-edit"></i> <?php echo LANG_UPDATE;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" title="<?php echo LANG_TIP_UPDATE;?> Record" class="btn btn-default btn-md tip"><i class="fa fa-edit"></i> <?php echo LANG_UPDATE;?></a>
 		
 	<!-- <a href="<?php echo H_ADMIN_MAIN;?>&view=patients&id=<?php echo $rows->id;?>&do=export2&hexport=yes&etype=word" title="<?php echo LANG_TIP_WORD;?>" class="btn btn-default btn-xs tip"><i class="fa fa-file-o"></i> <?php echo LANG_WORD;?></a> -->
 	
-	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&id=<?php echo $rows->id;?>&do=export2&hexport=yes&etype=printer" title="<?php echo LANG_TIP_PRINT;?>" target="_blank" class="btn btn-default btn-xs tip"><i class="fa fa-print"></i> <?php echo LANG_PRINT;?></a>
+	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&id=<?php echo $rows->id;?>&do=export2&hexport=yes&etype=printer" title="<?php echo LANG_TIP_PRINT;?>" target="_blank" class="btn btn-default btn-md tip"><i class="fa fa-print"></i> <?php echo LANG_PRINT;?></a>
 	
-	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=delete&dfile=" title="<?php echo LANG_TIP_DELETE_ALL;?>" class="btn btn-default btn-xs tip" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_DELETE;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=delete&dfile=" title="<?php echo LANG_TIP_DELETE_ALL;?>" class="btn btn-default btn-md tip" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_DELETE;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&do=viewall" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_VIEWALL;?>"><i class="fa fa-reply"></i> <?php echo LANG_GO_BACK;?></a>
+	
 	</ul>
 	
 	 </div><!-- /.box-header -->

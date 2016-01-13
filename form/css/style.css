@@ -10,12 +10,12 @@
   border-radius: 20px;
   box-shadow: 0 0 5px #ddd;
   margin: 100px auto 0;
-  margin-top: 10px;
-  min-height: 512px;
-  width: 596px;
+  margin-top:20px;
+  min-height: 493px;
+  width: 700px;
 }
 .card-bottom {
-	width: 596px;
+	width: 700px;
 	margin: 0px auto;
 	position: relative;
 }
@@ -53,7 +53,49 @@
   margin-top: 6px;
   padding: 0 1%;
   width: 48%;
+} 
+
+.info input::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
 }
+
+.info input:-moz-placeholder { /* Firefox 18- */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input::-moz-placeholder { /* Firefox 19+ */
+ color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input:-ms-input-placeholder { /* IE 10+ */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input::-ms-input-placeholder { /* Edge */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input:placeholder-shown { /* Standard one last! */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+/* select plceholder */
+
+
+
+
+
 .info input {
 	background: transparent none repeat scroll 0 0;
 	border-color: #ddd;
@@ -62,9 +104,9 @@
 	border-width: medium medium 1px;
 	box-shadow: none;
 	padding: 0;
-	color: #7c8087;
-	font-style: italic;
-	font-weight: 300;
+	color: #242424;
+	font-style: normal;
+	font-weight: 400;
 	height: 34px;
 	width:100%;
 }
@@ -166,7 +208,7 @@
 }
 
 .terms {
-  background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;
+  /*background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;*/
   float: left;
   margin: 0;
   padding: 10px 20px;
@@ -174,17 +216,17 @@
    width:100%;
 }
 .terms li {
-	background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 10px;
-	color: #404854;
-	font-size: 15px;
-	line-height: 25px;
-	list-style: outside none none;
-	padding-left: 15px;
+  background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
+  color: #404854;
+  font-size: 12px;
+  line-height: 19px;
+  list-style: outside none none;
+  padding-left: 15px;
 }
 .card-bottom p {
-	color: #4d5c71;
-	font-size: 14px;
-	margin-top: 15px;
+  color: #4d5c71;
+  font-size: 12px;
+  margin-top: 15px;
 }
 .create-btn {
 	background: #479e42 none repeat scroll 0 0;
@@ -197,7 +239,12 @@
 	padding: 15px;
 	text-transform: uppercase;
 	width: 100%;
-	cursor: pointer;
+    cursor:pointer;
+	transition:all ease 1s;
+}
+.create-btn:hover, .create-btn:focus {
+	background:#50b14a;
+	
 }
 .inpt-flds::before {
 	background: rgba(0, 0, 0, 0) url("../images/start_here.png") repeat scroll 0 0;
@@ -217,6 +264,129 @@
 	width: 56%;
 	height: 225px;
 }
+
+/******************************************/
+           /* RX card */
+/******************************************/
+
+.card-buttons {
+  margin: 15px auto;
+  width: 700px;
+}
+.H-card.Rx-card {
+  min-height: 375px;
+}
+.U-info {
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+  width: 100%;
+}
+.information {
+  float: left;
+  width: 25%;
+}
+.information span {
+  color: #666;
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  width: 100%;
+  color:#7c8087;
+}
+.information label {
+  float: left;
+  font-size: 15px;
+  width: 100%;
+    color:#02142a;
+}
+.Help {
+  color: #26559e;
+  font-size:15px;
+}
+.save-up.rx {
+  font-size: 15px;
+  line-height: 24px;
+}
+.print-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-right: 15px;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  width: 30%;
+  cursor:pointer;
+  transition:all ease 1s;
+}
+.print-btn:hover, .print-btn:focus {
+	background:#50b14a;
+	
+}
+.email-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-right: 16px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  width: 30%;
+  transition:all ease 1s;
+    cursor:pointer;
+}
+.email-btn:hover, .email-btn:focus {
+	background:#50b14a;
+	
+}
+.save-pdf-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  width: 33%;
+  cursor:pointer;
+  transition:all ease 1s;
+}
+.save-pdf-btn:hover, .save-pdf-btn:focus {
+	background:#50b14a;
+	
+}
+.reach-terms li {
+  line-height: 14px !important;
+  margin-bottom: 8px;
+}
+.reach-terms {
+/*   background: rgba(0, 0, 0, 0) url("../images/reach-footer-logo.png") no-repeat scroll 97% center; */
+  float: left;
+  margin: 0;
+  padding: 10px 20px;
+   box-sizing: border-box;
+   width:100%;
+}
+.terms li {
+  background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
+  color: #404854;
+  font-size: 12px;
+  line-height: 19px;
+  list-style: outside none none;
+  padding-left: 15px;
+}
+
+
+
 @media only screen and (max-width: 1199px) {
 .inpt-flds::before {
 	background: rgba(0, 0, 0, 0) url("../images/start_here.png") no-repeat scroll 0 0 / 100% auto;
@@ -306,8 +476,45 @@
 .terms li {
     background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
  }
+ .information {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.print-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size:22px;
+}
+.email-btn {
+ margin-bottom: 15px;
+ width: 100%;
+   font-size:22px;
+}
+.save-pdf-btn {
+  margin-bottom: 15px;
+  width: 100%;
+    font-size:22px;
+}
+.information label {
+  font-size: 20px;
+  width: 30%;
+}
+.information span {
+  width: 70%;
+  font-size: 18px;
 }
 
+}
+@media only screen and (max-width: 635px) {
+.H-card {
+  width: 94%;
+}
+.card-buttons {
+  margin: 15px auto;
+  width: 94%;
+}
+	
+}
 @media only screen and (max-width: 558px) {
 	
 .terms li {
@@ -332,6 +539,9 @@
 }
 .card-bottom {
   width: 94%;
+}
+.card-buttons {
+   width: 92%;
 }
 }
 
@@ -366,7 +576,12 @@
  .create-btn {
   font-size: 18px;
 }
+.information label {
+  font-size: 18px;
+  width: 50%;
 }
-iframe{
-    overflow:hidden;
+.information span {
+  width: 50%;
+  font-size: 16px;
+}
 }

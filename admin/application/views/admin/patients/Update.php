@@ -21,11 +21,11 @@
 	 <input type="submit" name="button" id="hButton" class="hidden" value="<?php echo LANG_UPDATE_RECORD;?>" />
 -->
 	 	 
-	  <a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details" title="View Details" class="btn btn-default btn-sm tip"><i class="fa fa-th-list"></i> <?php echo LANG_CANCEL;?></a>
+	  <a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details" title="View Details" class="btn btn-default btn-md tip"><i class="fa fa-th-list"></i> <?php echo LANG_CANCEL;?></a>
 	
-	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=delete&dfile=" title="<?php echo LANG_TIP_DELETE;?>" class="btn btn-default btn-sm tip" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_DELETE;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=delete&dfile=" title="<?php echo LANG_TIP_DELETE;?>" class="btn btn-default btn-md tip" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_DELETE;?></a>
 	
-	<a href="<?php echo H_ADMIN;?>&view=patients&do=viewall" class="btn btn-default btn-sm tip" title="<?php echo LANG_TIP_VIEWALL;?>"><i class="fa fa-reply"></i> <?php echo LANG_GO_BACK;?></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&do=viewall" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_VIEWALL;?>"><i class="fa fa-reply"></i> <?php echo LANG_GO_BACK;?></a>
 	</ul>
 	<div class="panel panel-default">
   <!-- Default panel contents -->
@@ -91,7 +91,7 @@
 	<input id="date" name="date" type="text" maxlength="255"  value="<?php echo $rows->date;?>" class="form-control styler" />
 	</div> -->
 
-	 <div class="output"></div>
+<!-- 	 <div class="output"></div> -->
 	  </div>
 	   <div class="panel-footer" style="border-bottom:solid 2px #CCC;"> 
      <label for="hButton" class="btn btn-info" style="color:#FFF;"><i class="fa fa-floppy-o"></i> <?php echo LANG_SAVE_CHANGES;?></label>

@@ -8,14 +8,14 @@
 	define('LANG_BACKUP_DELETED','Database Backup Has Been Deleted Successfully');
 	define('LANG_BACKUP_CREATED','Database Backup Has Been Created Successfully');
 	define('LANG_DATABASE_DELETE_AUTH','Are you sure you want to delete this Back-up');
-	define('LANG_DELETE_AUTH','Delete record(s)');
+	define('LANG_DELETE_AUTH','Delete record(s)?');
 	define('LANG_CSV_SUCCESS','CSV data successfully imported to database!!');
 	define('LANG_SUCCESS_TRUNCATE','Table truncate was successfully');
 	define('LANG_TRUNCATE_DELETE_AUTH','Are you sure you want to CLEAR all the records in this TABLE?');
 	
 	//Reports
 	define('LANG_REPORT_TITLE','Global Reach');
-	define('LANG_REPORT_SUB_TITLE','Patient Database as '.date('d/m/Y').'');
+	define('LANG_REPORT_SUB_TITLE','Patient Database as '.date('m/d/Y').'');
 	define('LANG_REPORT_TABLE','Table Name:');
 	
 	//Tables
