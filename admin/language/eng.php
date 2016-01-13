@@ -41,7 +41,8 @@
 	define('LANG_TRUNCATE','Empty');
 	define('LANG_UPDATE_THIS_RECORD','Update this Record');
 	define('LANG_ADD_NEW_RECORD','Add New Record');
-	define('LANG_ACTIONS','Actions');
+	define('LANG_ACTIONS','View/Edit');
+	define('LANG_DELETE','Delete');
 	define('LANG_PREVIEW','Preview');
 	//Paging
 	define('LANG_NEXT','Next');

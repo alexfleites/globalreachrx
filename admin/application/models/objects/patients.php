@@ -20,9 +20,9 @@
 	{
 	if($limit){
 	$startpg = pageparam($limit);
-	return HDB::hus()->Hselect("patients " . ($active !== NULL ? "WHERE active = {$active} " : "") . "LIMIT {$startpg} , {$limit}");
+	return HDB::hus()->Hselect("patients " . ($active !== NULL && $active != 'all' ? "WHERE active = {$active} " : "") . "LIMIT {$startpg} , {$limit}");
 	}else{
-	return HDB::hus()->Hselect("patients " . ($active !== NULL ? "WHERE active = {$active} " : "") );	
+	return HDB::hus()->Hselect("patients " . ($active !== NULL && $active != 'all' ? "WHERE active = {$active} " : "") );	
 	}
 	}
 	

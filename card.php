@@ -72,25 +72,24 @@
 	 	return false;
  	}
 
- 	function printcard(id){
-	 	$('#pleaseWaitDialog').modal('show');
-	 	$.ajax({
-		 	type: 'GET',
-		 	url: 'printcard.php',
-		 	data: {pid:id,site:'<?php echo $site?>'},
-		 	success: function(data){
-			 	$('#pleaseWaitDialog').modal('hide');
-			 	document.write(data);
-		 	}
-	 	});
-	 	return false;
+ 	function print_card(){
+ 		window.open('printcard.php?pid=<?php echo $id?>&site=<?php echo $site?>', 'Print', 'width=800,height=700');
  	}
- 	
+
  	function download_card(card_file){
 	 	window.location.replace("download.php?f=<?php echo $_SERVER['DOCUMENT_ROOT']?>/printrxcards/cards/" + card_file);
  	}
 
 </script>
+
+<style>
+
+	a:link, a:active, a:hover{
+		color: white;
+		text-decoration: none;
+	}
+
+</style>
 
 <div class="container">
 	<div class="row">
@@ -100,7 +99,7 @@
 		<div id="mail_error" class="alert alert-danger" style="width: 60%; margin:0 auto; display: none;">
 		</div>
 	</div>
-	<?php if(isMobile()){?>
+	<?php if(!isMobile()){?>
 	<div class="row" style="margin-bottom: 10px;">
 		<h2>Print Your Discount Card Now</h2>
 		<p style="font-size:16px; color: gray;">
@@ -123,15 +122,14 @@
 						$html = file_get_contents($htmlFileLocation); 
 						$html = fill_card($html, $site);
 						$html = str_replace("{full_name}", $full_name, $html); //ful_name 
-						$html = str_replace("{card_id}", $row['card_id'], $html); //card_id
 					}
 					echo $html;
 					?>
 					<div class="clear"></div>
 					<div class="card-buttons" style="margin-top: 30px;">
-						<center><a class="print-btn" onmouseover="return false;" href="javascript:window.open('printcard.php?pid=<?php echo $id?>&site=<?php echo $site?>', 'Print', 'width=800,height=700')" style="margin-bottom: 20px; text-decoration: none;">Print</a>
+						<center><a class="print-btn" onmouseover="return false;" href="javascript:print_card();" style="margin-bottom: 20px; text-decoration: none;">Print</a>
 						<a class="email-btn" onmouseover="return false;" onclick="mailcard('<?php echo $id?>');" style="margin-bottom: 20px; text-decoration: none;">Email</a>
-						<a class="save-pdf-btn" onmouseover="return false;" href="download.php?f=<?php echo $card_file?>" style="margin-bottom: 20px; text-decoration: none;">Save to pdf </a></center>
+						<a class="save-pdf-btn" onmouseover="return false;" href="downloadcard.php?pid=<?php echo $id?>&site=<?php echo $site?>" style="margin-bottom: 20px; text-decoration: none;">Save to pdf </a></center>
 					</div>
 	<?php		}
 			}

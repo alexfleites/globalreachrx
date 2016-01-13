@@ -279,19 +279,19 @@
 }
 .information {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 .information span {
   color: #666;
   float: left;
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
   width: 100%;
   color:#7c8087;
 }
 .information label {
   float: left;
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
     color:#02142a;
 }
@@ -383,6 +383,7 @@
 /* Dashd Border
 ------------------------------- */
 /*
+
 .card-wrap::before {
     content: url("../images/icon-scissor.png");
     left: 45px;
@@ -391,6 +392,7 @@
     top: -28px;
 }
 */
+
 .card-wrap {
     border: 2px dashed gray;
     border-radius: 15px;

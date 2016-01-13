@@ -28,7 +28,7 @@ define('H_TITLE','Global Reach Admin');
 
 define('PAGINATION_TYPE','Normal');//Normal|Jquery
 
-define('RECORD_PER_PAGE','20');
+define('RECORD_PER_PAGE','10');
 
 define('BIG_IMAGE_WIDTH','300');
 define('THUMB_IMAGE_WIDTH','150');

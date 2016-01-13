@@ -13,26 +13,10 @@
 </head>
 
 <style>
-	.field{
-		margin: 0;
-		padding: 0;
-		font-weight: bold;
-		font-family: arial;
-		font-size: 20px;
-	}
-	
 	a:link, a:active, a:hover{
 		color: white;
 		text-decoration: none;
 	}
-	.card-wrap::before {
-	    content: url("form/images/icon-scissor.png");
-	    left: 45px;
-	    opacity: 0.6;
-	    position: absolute;
-	    top: -28px;
-	}
-
 </style>
 
 <body>
@@ -48,14 +32,17 @@
           <label>Name</label><br>
           <span>{full_name}</span> </div>
         <div class="information">
-          <label>Bin#</label><br>
+          <label>Bin</label><br>
           <span>{card_bin}</span> </div>
         <div class="information">
-          <label>ID #</label><br>
+          <label>ID</label><br>
           <span>{card_id}</span> </div>
         <div class="information">
-          <label>Group#</label><br>
+          <label>RxGroup</label><br>
           <span>{card_group}</span> </div>
+        <div class="information">
+          <label>PCN</label><br>
+          <span>{card_pcn}</span></div>
       </div>
       <div class="save-up rx"> {slogan} <br/>
         <span class="Help">{pharmacy_help} (888) <span>723</span>-6004</span> </div>

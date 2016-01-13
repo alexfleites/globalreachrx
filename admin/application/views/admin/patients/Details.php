@@ -19,6 +19,7 @@
     <h3 class="box-title">Patients</h3>
    <ul class="nav pull-right">
 	<input type="hidden" id="pid" value="<?php echo $rows->id;?>">		
+	<input type="hidden" id="site" value="<?php echo ($rows->source == "Global Reach Health" ? "globalreachhealth" : "");?>">		
 <!-- 	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?></a> -->
 	
 	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" title="<?php echo LANG_TIP_UPDATE;?> Record" class="btn btn-default btn-md tip"><i class="fa fa-edit"></i> <?php echo LANG_UPDATE;?></a>
@@ -72,9 +73,8 @@
 	  </tr>
 	</tbody>
 	</table>
-	<div class="output"></div>
 	 </div><!-- /.box-body -->
-	 <?php if($rows->active == 1 && $have_card){?>
+	 <?php if($rows->active == 1){?>
 	 <div class="panel-footer" style="border-bottom:solid 2px #CCC;"> 
 	 <label for="hDownloadButton" class="btn btn-info" style="color:#FFF;"><i class="fa fa-download"></i> <?php echo LANG_DOWNLOAD_CARD;?></label>
 	 <input type="button" name="button" id="hDownloadButton" class="hidden" value="<?php echo LANG_DOWNLOAD_CARD;?>" />

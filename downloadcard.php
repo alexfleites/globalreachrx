@@ -19,16 +19,29 @@
 		if($row = mysql_fetch_array($query)){
 			$full_name = $row['first_name'] . ' ' . $row['last_name'];
 			$query = mysql_query("SELECT * FROM cards WHERE id_patient = {$id}");
+			$card_not_exists = false;
 			if($row = mysql_fetch_array($query)){
-				$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
-				$html = file_get_contents($htmlFileLocation); 
-				$html = fill_card($html, $site);
-				$html = str_replace("{full_name}", $full_name, $html); //ful_name 
-				
-				//output pdf file
-				$mpdf->WriteHTML($html);
-				$mpdf->Output();
+				$card_id = $row['card_id'];
+				$card_file = $row['card'];
+			}else{
+				$card_not_exists = true;
+				$card_id = get_last_id("card_id", "cards");
+				$card_file =  $card_id . ".pdf";
+				mysql_query("INSERT INTO cards (card_id, id_patient, card, date)
+					VALUES('{$card_id}', '{$id}', '{$outputFileLocation}', NOW())");					
 			}
+			$outputFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/{$card_file}";
+			$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+			$html = file_get_contents($htmlFileLocation); 
+			$html = fill_card($html, $site);
+			$html = str_replace("{full_name}", $full_name, $html); //ful_name 
+			
+			//output pdf file
+			$mpdf->WriteHTML($html);
+			if($card_not_exists){
+				$mpdf->Output($outputFileLocation, 'F');
+			}
+			$mpdf->Output($card_id . ".pdf", 'D');
 		}
 	}
 ?>

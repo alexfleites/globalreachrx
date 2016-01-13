@@ -66,7 +66,6 @@
 	<input id="date" name="date" type="text" maxlength="255"  value="" class="form-control styler" />
 	</div> -->
 
-	 <div class="output"></div>
 	  </div>
 	   <div class="panel-footer" style="border-bottom:solid 2px #CCC;"> 
      <label for="hButton" class="btn btn-info" style="color:#FFF;"><i class="fa fa-floppy-o"></i> <?php echo LANG_CREATE_RECORD;?></label>

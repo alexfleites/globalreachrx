@@ -114,7 +114,7 @@ var startingNo = -1;
 
     $('#hDownloadButton').on('click', function(e){
 		e.preventDefault();
-		window.location.replace("../download.php?pid=" + $('input#pid').val());
+		window.location.replace("../downloadcard.php?pid=" + $('input#pid').val() + "&site=" + $('input#site').val());
     });
 
 });

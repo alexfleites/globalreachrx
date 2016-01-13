@@ -116,18 +116,20 @@
 			$html = str_replace("{pharmacy_help}", "Helpline", $html);
 			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs and medical services worldwide.", $html);
 			$html = str_replace("{card_present}", "Present this card to your local pharmacy and/or clinical to save on your prescriptions and medical services.", $html);
-			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/footer-logo.png) no-repeat scroll 97% center;'", $html);
+			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/reach-footer-logo.png) no-repeat scroll 97% center;'", $html);
 		}else{
 			$html = str_replace("{title}", "Global Reach RX", $html);
 			$html = str_replace("{logo}", "<img src='form/images/logo.png' alt=''/>", $html);
-			$html = str_replace("{subtitle}", "start saving now", $html);
+			$html = str_replace("{subtitle}", "pharmacy discount card", $html);
 			$html = str_replace("{pharmacy_help}", "Pharmacy Help", $html);
 			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs at over 50,000 pharmacies", $html);
 			$html = str_replace("{card_present}", "Present this card to your local pharmacy to save on your prescriptions.", $html);
-			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/reach-footer-logo.png) no-repeat scroll 97% center;'", $html);
+			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/footer-logo.png) no-repeat scroll 97% center;'", $html);
 		}
+		$html = str_replace("{card_id}", "550002", $html); //card_id
 		$html = str_replace("{card_bin}", "016912", $html); //card_bin
 		$html = str_replace("{card_group}", "550004", $html); //card_group
+		$html = str_replace("{card_pcn}", "9743", $html); //card_id
 		return $html;
 		
 	}

@@ -53,7 +53,7 @@ $(document).ready(function(){
       	</div>
      </div><!--/col-lg-3--> 
      <div class="col-md-4">Filter:&nbsp;
-     	<a class="btn btn-primary" href="<?php echo H_ADMIN;?>&view=patients&do=viewall">View All</a>
+     	<a class="btn btn-primary" href="<?php echo H_ADMIN;?>&view=patients&do=viewall&active=all">View All</a>
      	<a class="btn btn-success" href="<?php echo H_ADMIN;?>&view=patients&do=viewall&active=1">Active</a>
      	<a class="btn btn-danger" href="<?php echo H_ADMIN;?>&view=patients&do=viewall&active=0">Inactive</a>
      </div>
@@ -62,13 +62,14 @@ $(document).ready(function(){
 	<table data-page="false" class="table table-bordered table-hover table-striped" data-filter="#filter" data-page-size="<?php echo RECORD_PER_PAGE;?>" data-page-previous-text="<?php echo LANG_PREVIOUS;?>" data-page-next-text="<?php echo LANG_NEXT;?>">
 	<thead>
     <tr>
+	  <th data-sort-ignore="true"><?php echo LANG_ACTIONS;?></th>
       <th>First Name</th>
 	  <th data-hide="phone,tablet">Last Name</th>
 	  <th data-hide="phone,tablet">Phone</th>
 	  <th data-hide="phone,tablet">Email</th>
 	  <th data-hide="phone,tablet">Source</th>
 	  <th data-hide="phone,tablet">Status</th>
-	  <th data-sort-ignore="true"><?php echo LANG_ACTIONS;?></th>
+	  <th data-sort-ignore="true"><?php echo LANG_DELETE;?></th>
 	</tr>
   </thead>
   <tbody>
@@ -78,6 +79,12 @@ $(document).ready(function(){
 			{
 	?>
 	<tr>
+	<td class="table-actions">
+	 <div class="btn-group">
+	 <a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"  class="btn btn-info btn-sm" style="margin-right: 5px;"><span class="fa fa-search-plus tip" title="<?php echo LANG_TIP_DETAILS;?>"></span></a>
+	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" class="btn btn-primary btn-sm" style="margin-right: 5px;"><span class="fa fa-edit tip" title="<?php echo LANG_TIP_UPDATE;?>"></span></a>
+	 </div>
+	</td>
 	<td><a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"><?php echo $rows->first_name;?></a></td>
 	<td><a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"><?php echo $rows->last_name;?></a></td>
 	<td><?php echo $rows->phone;?></td>
@@ -86,8 +93,6 @@ $(document).ready(function(){
 	<td><?php echo check_status($rows->active);?></td>
 	<td class="table-actions">
 	 <div class="btn-group">
-	 <a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=details"  class="btn btn-info btn-sm" style="margin-right: 5px;"><span class="fa fa-search-plus tip" title="<?php echo LANG_TIP_DETAILS;?>"></span></a>
-	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" class="btn btn-primary btn-sm" style="margin-right: 5px;"><span class="fa fa-edit tip" title="<?php echo LANG_TIP_UPDATE;?>"></span></a>
 	 <a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=delete" class="btn btn-danger btn-sm" data-confirm="<?php echo LANG_DELETE_AUTH;?>"> <span class="fa fa-times tip" title="<?php echo LANG_TIP_DELETE;?>"></span></a>
 	 </div>
 	 </td>
