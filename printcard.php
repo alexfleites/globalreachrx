@@ -20,7 +20,11 @@
 			$full_name = $row['first_name'] . ' ' . $row['last_name'];
 			$query = mysql_query("SELECT * FROM cards WHERE id_patient = {$id}");
 			if($row = mysql_fetch_array($query)){
-				$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+				if($site == 'globalreachhealth'){
+					$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/GlobalReach.html";
+				}else{
+					$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+				}
 				$html = file_get_contents($htmlFileLocation); 
 				$html = fill_card($html, $site);
 				$html = str_replace("{full_name}", $full_name, $html); //ful_name 

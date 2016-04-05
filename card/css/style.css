@@ -1,0 +1,735 @@
+.healthcard_Sec {
+	float: left;
+	width: 100%;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+.H-card {
+  background: #f8f8f8 none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #ddd;
+  margin: 100px auto 0;
+  min-height: 493px;
+  width: 596px;
+}
+.card-bottom {
+	width: 596px;
+	margin: 0px auto;
+	position: relative;
+}
+.logo-sec.reach-logo {
+  padding: 5px 0 0;
+}
+.vari {
+  font-variant: small-caps;
+}
+.logo-sec {
+	background: #eff7ec none repeat scroll 0 0;
+	border-bottom: 1px solid #ddd;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding: 15px 15px 6px;
+	text-align: center;
+}
+.discount-card {
+	background: #26559e;
+	padding: 13px;
+}
+.discount-card h1 {
+	color: #f2f2f2;
+	font-size: 23px;
+	font-weight: 700;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.discount-card.reach-card > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.discount-card.reach-card {
+  padding: 5px 15px;
+}
+.inpt-flds {
+	padding: 20px 20px 10px;
+	position: relative;
+}
+.inpt-flds > h1 {
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0 0 5px;
+}
+.info {
+  float: left;
+  margin-top: 6px;
+  padding: 0 1%;
+  width: 48%;
+} 
+
+.info input::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input:-moz-placeholder { /* Firefox 18- */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input::-moz-placeholder { /* Firefox 19+ */
+ color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input:-ms-input-placeholder { /* IE 10+ */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input::-ms-input-placeholder { /* Edge */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.info input:placeholder-shown { /* Standard one last! */
+  color: #7c8087;
+	font-style: italic;
+	font-weight: 300;
+}
+/* select plceholder */
+
+
+
+
+
+.info input {
+	background: transparent none repeat scroll 0 0;
+	border-color: #ddd;
+	border-radius: 0;
+	border-style: none none solid;
+	border-width: medium medium 1px;
+	box-shadow: none;
+	padding: 0;
+	color: #242424;
+	font-style: normal;
+	font-weight: 400;
+	height: 34px;
+	width:100%;
+}
+.slct {
+  float: left;
+  width: 100%;
+}
+.slct select {
+  border-color: #ddd ;
+  border-style: none none solid;
+  border-width: medium 0 1px;
+  color: #a1a6af;
+  font-style: italic;
+  height: 35px;
+  margin-top: 10px;
+  width: 100%;
+  font-weight: 300;
+}
+.css-select {
+   background: url("images/slct.png") no-repeat scroll 98% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding:0;
+    border: none;
+	-webkit-border: 1em;
+}
+.clear
+{
+	clear:both;
+}
+.info.info-detail {
+	padding-right: 0;
+}
+.info.info-detailR {
+	padding-left: 0;
+}
+.info-detailR-scnd {
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+  width: 60%;
+}
+.info-detailR-scnd > h1 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 12px;
+}
+.info-detailR-fst > h1 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 12px;
+  width: 100%;
+}
+.info-detailR-fst {
+  float: left;
+  width: 40%;
+}
+.info.info-detail > h1 {
+	font-size: 14px;
+	margin-top: 12px;
+	font-weight: 300;
+}
+.info.info-detail span {
+	color: #7c8087;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 300;
+}
+.info-detailR > h1 {
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 12px;
+	padding: 0 15px;
+}
+.info-detailR span {
+	color: #7c8087;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 300;
+}
+.info-detailR {
+	padding: 0;
+}
+.save-up {
+  background: #eff7ec none repeat scroll 0 0;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  color: #242424;
+  float: left;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.terms {
+  background: rgba(0, 0, 0, 0) url("images/footer-logo.png") no-repeat scroll 97% center;
+  float: left;
+  margin: 0;
+  padding: 10px 20px;
+   box-sizing: border-box;
+   width:100%;
+}
+.terms li {
+  background: rgba(0, 0, 0, 0) url("images/list-icon.png") no-repeat scroll 0 6px;
+  color: #404854;
+  font-size: 12px;
+  line-height: 19px;
+  list-style: outside none none;
+  padding-left: 15px;
+}
+.card-bottom p {
+  color: #4d5c71;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.create-btn {
+	background: #479e42 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 12px;
+	color: #f2f2f2;
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 100px;
+	padding: 15px;
+	text-transform: uppercase;
+	width: 100%;
+    cursor:pointer;
+	transition:all ease 1s;
+}
+.create-btn:hover, .create-btn:focus {
+	background:#50b14a;
+	
+}
+.inpt-flds::before {
+	background: rgba(0, 0, 0, 0) url("images/start_here.png") repeat scroll 0 0;
+	content: "";
+	height: 194px;
+	left: -287px;
+	position: absolute;
+	top: -52px;
+	width: 51%;
+}
+.card-bottom::before {
+	content: '';
+	background: url("images/printcard.png");
+	position: absolute;
+	right: -332px;
+	top: -48px;
+	width: 56%;
+	height: 225px;
+}
+
+/******************************************/
+           /* RX card */
+/******************************************/
+
+.card-buttons {
+  margin: 15px auto;
+  width: 596px;
+}
+.H-card.Rx-card {
+  min-height: 375px;
+}
+.U-info {
+  box-sizing: border-box;
+  float: left;
+  padding: 15px 20px;
+  width: 100%;
+}
+.U-info.Rx-info {
+  padding: 6px 20px;
+}
+.U-info .information {
+  float: left;
+  width: 25%;
+}
+.U-info.Rx-info .information {
+  float: left;
+  width: 50%;
+}
+.information {
+  float: left;
+  width: 50%;
+}
+.information span {
+  color: #666;
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  width: 50%;
+  color:#7c8087;
+}
+.U-info.Rx-info .information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
+  width: auto;
+}
+.U-info.Rx-info .information span {
+  color: #7c8087;
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  width: 50%;
+}
+.U-info .information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
+  width: 100%;
+}
+.U-info .information span {
+  color: #7c8087;
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  width: 100%;
+}
+.information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
+  padding-right: 30px;
+}
+.rx-services {
+  display: block;
+  float: left;
+  margin: 0;
+  padding-left: 9px;
+  text-align: left;
+  width: 31%;
+}
+.rx-services > li {
+  background: rgba(0, 0, 0, 0) url("images/list-icon.png") no-repeat scroll 0 4px;
+  color: #757575;
+  font-size: 13px;
+  line-height: 15px;
+  list-style: outside none none;
+  margin-bottom: 5px;
+  padding-left: 12px;
+  text-transform: none;
+}
+.save-up.rx.reach {
+  padding: 6px 15px;
+}
+.Help {
+  color: #26559e;
+  font-size:15px;
+}
+.save-up.rx {
+  font-size: 15px;
+  line-height: 24px;
+}
+.print-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-right: 15px;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  width: 30%;
+  cursor:pointer;
+  transition:all ease 1s;
+}
+.print-btn:hover, .print-btn:focus {
+	background:#50b14a;
+	
+}
+.email-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-right: 16px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  width: 30%;
+  transition:all ease 1s;
+    cursor:pointer;
+}
+.email-btn:hover, .email-btn:focus {
+	background:#50b14a;
+	
+}
+.save-pdf-btn {
+  background: #479e42 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 12px;
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  width: 33%;
+  cursor:pointer;
+  transition:all ease 1s;
+}
+.save-pdf-btn:hover, .save-pdf-btn:focus {
+	background:#50b14a;
+	
+}
+.reach-terms li {
+  line-height: 14px !important;
+  margin-bottom: 5px;
+}
+.rx-services > li {
+  font-weight: 400;
+}
+.reach-terms li:last-child {
+  margin-bottom: 0;
+}
+.reach-terms {
+  background: rgba(0, 0, 0, 0) url("images/reach-footer-logo.png") no-repeat scroll 97% center;
+  float: left;
+  margin: 0;
+  padding: 10px 20px;
+   box-sizing: border-box;
+   width:100%;
+}
+.terms li {
+  background: rgba(0, 0, 0, 0) url("images/list-icon.png") no-repeat scroll 0 5px;
+  color: #404854;
+  font-size: 13px;
+  line-height: 19px;
+  list-style: outside none none;
+  padding-left: 15px;
+}
+.help {
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  float: left;
+  padding: 7px 20px;
+  width: 100%;
+}
+.Rparts > h1 {
+  color: #26559e;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  text-align: right;
+}
+.Lparts {
+  float: left;
+  width: 50%;
+}
+.Rparts {
+  float: right;
+  width: 50%;
+}
+.Lparts .information span {
+  color: #7c8087;
+  float: left;
+  font-size: 13px;
+  font-style: italic;
+  width: 100%;
+}
+.Lparts .information label {
+  font-size: 14px;
+  width: 50%;
+}
+.Lparts .information {
+  float: left;
+  width: 30%;
+}
+.Lparts .information:first-child {
+  width: 38%;
+}
+@media only screen and (max-width: 1199px) {
+.inpt-flds::before {
+	background: rgba(0, 0, 0, 0) url("images/start_here.png") no-repeat scroll 0 0 / 100% auto;
+	content: "";
+	height: 194px;
+	left: -131px;
+	position: absolute;
+	top: 12px;
+	width: 25%;
+}
+.card-bottom::before {
+	background: rgba(0, 0, 0, 0) url("images/printcard.png") no-repeat scroll 0 0 / 43% auto;
+	content: "";
+	height: 225px;
+	position: absolute;
+	right: -371px;
+	top: 28px;
+	width: 62%;
+}
+.healthcard_Sec {
+	overflow: hidden;
+}
+}
+@media only screen and (max-width: 991px) {
+.inpt-flds::before {
+	background: rgba(0, 0, 0, 0) url("images/start_here.png") no-repeat scroll 0 0 / 100% auto;
+	content: "";
+	height: 194px;
+	left: -74px;
+	position: absolute;
+	top: 32px;
+	width: 15%;
+}
+.card-bottom::before {
+	background: rgba(0, 0, 0, 0) url("images/printcard.png") no-repeat scroll 0 0 / 43% auto;
+	content: "";
+	height: 225px;
+	position: absolute;
+	right: -177px;
+	top: 74px;
+	width: 31%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+ .inpt-flds::before {
+	display: none;
+}
+.card-bottom::before {
+  display: none;
+ }
+.info.info-detail {
+  margin: 0;
+  padding-right: 0;
+}
+.info.info-detailR {
+	margin-top: 0;
+	padding-left: 0;
+}
+
+.info {
+  float: left;
+  margin-top: 6px;
+  padding: 0;
+  width: 100%;
+}
+.info-detailR-fst > h1 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+}
+.info-detailR-fst {
+  float: left;
+  width: 100%;
+}
+.H-card {
+  min-height: 645px;
+}
+.terms {
+  background: transparent none repeat scroll 0 0;
+}
+.terms li {
+  line-height: 19px;
+  margin-bottom: 8px;
+  font-size:13px;
+}
+.terms li {
+    background: rgba(0, 0, 0, 0) url("images/list-icon.png") no-repeat scroll 0 6px;
+ }
+ .U-info.Rx-info .information {
+  float: left;
+  width: 100%;
+}
+ .information {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.print-btn {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size:22px;
+}
+.email-btn {
+ margin-bottom: 15px;
+ width: 100%;
+   font-size:22px;
+}
+.save-pdf-btn {
+  margin-bottom: 15px;
+  width: 100%;
+    font-size:22px;
+}
+.U-info .information {
+  float: left;
+  width: 100%;
+}
+.information label {
+  font-size: 20px;
+  width: 100%;
+}
+.information span {
+  width: 70%;
+  font-size: 18px;
+}
+.Lparts {
+  float: left;
+  width: 100%;
+}
+.Rparts {
+  float: right;
+  width: 100%;
+}
+.rx-services {
+  width: 100%;
+  margin:0px;
+  box-sizing: border-box;
+}
+.rx-services > li {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+}
+@media only screen and (max-width: 635px) {
+.H-card {
+  width: 94%;
+}
+.card-buttons {
+  margin: 15px auto;
+  width: 94%;
+}
+	
+}
+@media only screen and (max-width: 558px) {
+	
+.terms li {
+	line-height: 19px;
+	margin-bottom: 6px;
+}
+.discount-card h1 {
+	color: #f2f2f2;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.create-btn {
+	font-size: 24px;
+	padding: 10px 15px;
+}
+.H-card {
+  min-height: 689px;
+  width: 94%;
+}
+.card-bottom {
+  width: 94%;
+}
+.card-buttons {
+   width: 92%;
+}
+.discount-card h1 {
+  font-size: 17px;
+}
+}
+
+@media only screen and (max-width: 375px) {
+.logo-sec img {
+	width: 70%;
+}
+.discount-card h1 {
+	font-size: 16px;
+}
+.save-up {
+	padding: 15px;
+}
+.terms li {
+	background: rgba(0, 0, 0, 0) url("images/list-icon.png") no-repeat scroll 0 6px;
+}
+.terms {
+  background: transparent none repeat scroll 0 0;
+}
+}
+
+@media only screen and (max-width: 320px) {
+.save-up {
+	font-size: 15px;
+}
+.terms li {
+  font-size: 12px;
+ }
+ .card-bottom p {
+  font-size: 12px;
+ }
+ .create-btn {
+  font-size: 18px;
+}
+.information label {
+  font-size: 18px;
+  width: 50%;
+}
+.information span {
+  width: 50%;
+  font-size: 16px;
+}
+.Rparts > h1 {
+  font-size: 13px;
+}
+.U-info.Rx-info .information label {
+  padding-right: 20px;
+}
+}

@@ -118,7 +118,11 @@
 					$query = mysql_query("SELECT * FROM cards WHERE id_patient = {$id}");
 					if($row = mysql_fetch_array($query)){
 						$card_file = $row['card'];
-						$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+						if($site == 'globalreachhealth'){
+							$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/GlobalReach.html";
+						}else{
+							$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+						}
 						$html = file_get_contents($htmlFileLocation); 
 						$html = fill_card($html, $site);
 						$html = str_replace("{full_name}", $full_name, $html); //ful_name 
@@ -135,17 +139,6 @@
 			}
 		?>
 	</div>
-	<div class="row">
-		<center><h2>Questions? Call us at XXX-XXX-XXXX</h2></center>
-		<h2>Instructions:</h2>
-		<p style="font-size: 12px;">Print and take this card to your nearest pharmacy and start saving now!</p>
-		<h2>Frequently Asked Questions</h2>
-		<p style="margin-bottom: 60px;"></p>
-		<h2>What if my pharmacy cannot process this discount card?</h2>
-		<p style="font-size: 12px;">If your pharmacy is unable or unwilling to process your discount card, please call XXX-XXX-XXXX. Most issues can be resolved quickly.</p>
-		<p></p>
-		<h2>Can I use the discount card with my health insurance?</h2>
-		<p style="font-size: 12px;">This discount card price may be lower than your health insurance co-pay, it cannot be used to lower your co-pay. Ask your pharmacist to help you find the best possible price.</p>
-	</div>
+	<?php include('card_footer.php'); ?>
 </div>
 <?php include('footer.php'); ?>

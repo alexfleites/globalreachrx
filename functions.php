@@ -108,28 +108,49 @@
 		$html = $card; //get card content
 		
 		//$html = str_replace('<div class="card-wrap">', '<img src="form/images/icon-scissor.png" style="left: 45px; opacity: 0.6; position: absolute; margin-top: 40px;"><div class="card-wrap">', $html);
-		
-		if($site == 'globalreachhealth'){
-			$html = str_replace("{title}", "Global Reach Health", $html);
-			$html = str_replace("{logo}", "<img src='form/images/ReachLogo.png' alt=''/>", $html);
-			$html = str_replace("{subtitle}", "health discount card", $html);
-			$html = str_replace("{pharmacy_help}", "Helpline", $html);
-			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs and medical services worldwide.", $html);
-			$html = str_replace("{card_present}", "Present this card to your local pharmacy and/or clinical to save on your prescriptions and medical services.", $html);
-			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/reach-footer-logo.png) no-repeat scroll 97% center;'", $html);
-		}else{
-			$html = str_replace("{title}", "Global Reach RX", $html);
-			$html = str_replace("{logo}", "<img src='form/images/logo.png' alt=''/>", $html);
-			$html = str_replace("{subtitle}", "pharmacy discount card", $html);
-			$html = str_replace("{pharmacy_help}", "Pharmacy Help", $html);
-			$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs at over 50,000 pharmacies", $html);
-			$html = str_replace("{card_present}", "Present this card to your local pharmacy to save on your prescriptions.", $html);
-			$html = str_replace("{style_background}", "style='background: rgba(0, 0, 0, 0) url(form/images/footer-logo.png) no-repeat scroll 97% center;'", $html);
+		switch($site){
+			case 'globalreachhealth':
+			{
+				$html = str_replace("{title}", "Global Reach Health", $html);
+				$html = str_replace("{logo}", "<img src='http://www.globalreachhealth.com/wp-content/uploads/2016/01/GlobalReachHealth__RGB.png' width='370' alt=''/>", $html);
+				$html = str_replace("{subtitle}", "health discount card", $html);
+				$html = str_replace("{pharmacy_help}", "Pharmacy: (888) <span>723</span>-6004&nbsp;&nbsp;&nbsp;&nbsp;Medical Services: (305) <span>431</span>-5350", $html);
+				$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs and medical services worldwide.", $html);
+				$html = str_replace("{card_present}", "Present this card to your local pharmacy and/or clinical to save on your prescriptions and medical services.", $html);
+				break;
+			}
+			case 'globalreachrx':
+			{
+				$html = str_replace("{title}", "Global Reach RX", $html);
+				$html = str_replace("{logo}", "<img src='form/images/logo.png' alt=''/>", $html);
+				$html = str_replace("{subtitle}", "pharmacy discount card", $html);
+				$html = str_replace("{pharmacy_help}", "Pharmacy Help (888) <span>723</span>-6004", $html);
+				$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs at over 50,000 pharmacies", $html);
+				$html = str_replace("{card_present}", "Present this card to your local pharmacy to save on your prescriptions.", $html);
+				$html = str_replace("{hide_on_belizerx}", '
+				<tr>
+				    <td style="width: 3%; font-size: 13px;"><img src="form/images/list-icon.png"></td>
+				    <td style="font-size: 13px;">Currently valid for use in U.S.A only.</td>
+			    </tr>', $html);
+				break;
+			}
+			case 'belizerx':
+			{
+				$html = str_replace("{title}", "Belize RX", $html);
+				$html = str_replace("{logo}", "<img src='http://www.belizerx.com/wp-content/uploads/2016/01/logo.png' alt=''/>", $html);
+				$html = str_replace("{subtitle}", "pharmacy discount card", $html);
+				$html = str_replace("{pharmacy_help}", "Pharmacy Help (888) <span>723</span>-6004", $html);
+				$html = str_replace("{slogan}", "Save up to 75% on 50,000 drugs at over 50,000 pharmacies", $html);
+				$html = str_replace("{card_present}", "Present this card to your local pharmacy to save on your prescriptions.", $html);
+				$html = str_replace("{hide_on_belizerx}", '', $html);
+				break;
+			}
 		}
 		$html = str_replace("{card_id}", "550002", $html); //card_id
 		$html = str_replace("{card_bin}", "016912", $html); //card_bin
 		$html = str_replace("{card_group}", "550004", $html); //card_group
 		$html = str_replace("{card_pcn}", "9743", $html); //card_id
+
 		return $html;
 		
 	}

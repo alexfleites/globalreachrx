@@ -22,7 +22,7 @@
 			$card_not_exists = false;
 			if($row = mysql_fetch_array($query)){
 				$card_id = $row['card_id'];
-				$card_file = $row['card'];
+				$card_file = $card_id . ".pdf";
 			}else{
 				$card_not_exists = true;
 				$card_id = get_last_id("card_id", "cards");
@@ -31,16 +31,21 @@
 					VALUES('{$card_id}', '{$id}', '{$outputFileLocation}', NOW())");					
 			}
 			$outputFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/cards/{$card_file}";
-			$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+			if(!$card_not_exists){
+				unlink($outputFileLocation);
+			}
+			if($site == 'globalreachhealth'){
+				$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/GlobalReach.html";
+			}else{
+				$htmlFileLocation = $_SERVER['DOCUMENT_ROOT'] . "/printrxcard/card.html";
+			}
 			$html = file_get_contents($htmlFileLocation); 
 			$html = fill_card($html, $site);
 			$html = str_replace("{full_name}", $full_name, $html); //ful_name 
-			
+			//die($html);
 			//output pdf file
 			$mpdf->WriteHTML($html);
-			if($card_not_exists){
-				$mpdf->Output($outputFileLocation, 'F');
-			}
+			$mpdf->Output($outputFileLocation, 'F');
 			$mpdf->Output($card_id . ".pdf", 'D');
 		}
 	}

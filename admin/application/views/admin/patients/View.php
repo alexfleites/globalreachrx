@@ -23,6 +23,7 @@
 
 	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?> New Patient</a>
 	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=printer" target="_blank" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_PRINT;?>"><i class="fa fa-print"></i> <?php echo LANG_PRINT;?></a>
+	<a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=EMAIL" data-email="<?php echo LANG_EMAIL_LIST;?>" class="btn btn-default btn-md tip" title="<?php echo LANG_TIP_EMAIL;?>"><i class="fa fa-envelope"></i> <?php echo LANG_EMAIL;?></a>
 	<!-- <a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=excel" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_EXCEL;?>"><i class="fa fa-table"></i> <?php echo LANG_EXCEL;?></a>
 	 <a href="<?php echo H_ADMIN_MAIN;?>&view=patients&do=export&hexport=yes&etype=word" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_WORD;?>"><i class="fa fa-file-o"></i> <?php echo LANG_WORD;?></a>
 	<a href="<?php echo H_ADMIN;?>&view=patients&do=truncate" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_TRUNCATE;?>" data-confirm="<?php echo LANG_DELETE_AUTH;?>"><i class="fa fa-trash-o"></i> <?php echo LANG_TRUNCATE;?></a> -->

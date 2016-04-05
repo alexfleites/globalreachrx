@@ -43,6 +43,7 @@
 		elseif(get('msg')=='truncate'){success_msg(LANG_SUCCESS_TRUNCATE);}
 		elseif(get('msg')=='error'){error_msg(LANG_ERROR_MSG);}
 		elseif(get('msg')=='backup'){success_msg(LANG_BACKUP_CREATED);}
+		elseif(get('msg')=='emaillist'){success_msg(LANG_SUCCESS_EMAIL_LIST);}
 		elseif(get('dbrestore')!=''){success_msg(LANG_BACKUP_RESTORED);}
 		elseif(get('dbfile')!=''){success_msg(LANG_BACKUP_DELETED);}
 		?>

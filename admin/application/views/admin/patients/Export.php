@@ -67,6 +67,21 @@
 	';
 	print $excel;
 	}
+	elseif ($etype == 'EMAIL'){
+		//PHPMailer Object
+		require_once $_SERVER['DOCUMENT_ROOT']."/printrxcard/vendor/autoload.php";
+		$mail = new PHPMailer;
+		$email = urldecode($_REQUEST['email']);
+		$full_name = "";
+		$mail->From = "info@globalreachhealth.com";
+		$mail->FromName = "Global Reach Health";
+		$mail->addAddress($email, $full_name);
+		$mail->isHTML(true);
+		$mail->Subject = H_TITLE;
+		$mail->Body = $excel;
+		$mail->send();
+		send_to(''.H_ADMIN.'&view=patients&do=viewall&msg=emaillist');
+	}
 	elseif ($etype == 'PDF') {
 	HezecomPDF($excel, $pdf_output);
 	}

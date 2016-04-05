@@ -12,6 +12,7 @@
 	define('LANG_CSV_SUCCESS','CSV data successfully imported to database!!');
 	define('LANG_SUCCESS_TRUNCATE','Table truncate was successfully');
 	define('LANG_TRUNCATE_DELETE_AUTH','Are you sure you want to CLEAR all the records in this TABLE?');
+	define('LANG_SUCCESS_EMAIL_LIST', 'Email List was sent successfully!!!');
 	
 	//Reports
 	define('LANG_REPORT_TITLE','Global Reach');
@@ -27,6 +28,8 @@
 	define('LANG_DETAILS','Details');
 	define('LANG_CANCEL', 'Cancel');
 	define('LANG_PRINT','Print');
+	define('LANG_EMAIL','Email');
+	define('LANG_EMAIL_LIST', 'Email List to:');
 	define('LANG_EXCEL','Excel');
 	define('LANG_PDF','PDF');
 	define('LANG_CSV','CSV');
@@ -77,6 +80,7 @@
 	//Tooltips
 	define('LANG_TIP_ADD','Add New Record');
 	define('LANG_TIP_PRINT','Print Records');
+	define('LANG_TIP_EMAIL','Email List');
 	define('LANG_TIP_EXCEL','Export to Excel');
 	define('LANG_TIP_WORD','Export to Word');
 	define('LANG_TIP_PDF','Export to PDF');

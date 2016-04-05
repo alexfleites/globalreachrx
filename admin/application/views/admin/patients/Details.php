@@ -19,7 +19,7 @@
     <h3 class="box-title">Patients</h3>
    <ul class="nav pull-right">
 	<input type="hidden" id="pid" value="<?php echo $rows->id;?>">		
-	<input type="hidden" id="site" value="<?php echo ($rows->source == "Global Reach Health" ? "globalreachhealth" : "");?>">		
+	<input type="hidden" id="site" value="<?php echo ($rows->source == "Global Reach Health" ? "globalreachhealth" : ($rows->source == "GlobalReach Rx" ? "globalreachrx" : "belizerx"));?>">		
 <!-- 	<a href="<?php echo H_ADMIN;?>&view=patients&do=add" class="btn btn-default btn-xs tip" title="<?php echo LANG_TIP_ADD;?>"><i class="fa fa-plus"></i> <?php echo LANG_ADD;?></a> -->
 	
 	<a href="<?php echo H_ADMIN;?>&view=patients&id=<?php echo $rows->id;?>&do=update" title="<?php echo LANG_TIP_UPDATE;?> Record" class="btn btn-default btn-md tip"><i class="fa fa-edit"></i> <?php echo LANG_UPDATE;?></a>
@@ -52,7 +52,7 @@
 	</tr>
 		
 	<tr>
-	<th>Email</th><td><?php echo $rows->email;?></td>
+	<th>Email</th><td><a href="mailto:<?php echo $rows->email;?>"><?php echo $rows->email;?></a></td>
 	</tr>
 		
 	<tr>

@@ -35,6 +35,7 @@
 	 <div class="output"></div>
 	  
 	<input type="hidden" id="pid" name="id" value="<?php echo $rows->id;?>">
+	<input type="hidden" id="site" value="<?php echo ($rows->source == "Global Reach Health" ? "globalreachhealth" : ($rows->source == "GlobalReach Rx" ? "globalreachrx" : "belizerx"));?>">		
 	<div class="form-group">
     <label class="control-label" for="first_name">First Name</label>
 	<input id="first_name" name="first_name" type="text" maxlength="60"  value="<?php echo $rows->first_name;?>" class="form-control styler" />

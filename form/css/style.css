@@ -9,8 +9,7 @@
   border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: 0 0 5px #ddd;
-  margin: 100px auto 0;
-  margin-top: 20px;
+  margin: 50px auto 0;
   min-height: 493px;
   width: 596px;
 }
@@ -18,6 +17,12 @@
 	width: 596px;
 	margin: 0px auto;
 	position: relative;
+}
+.logo-sec.reach-logo {
+  padding: 5px 0 0;
+}
+.vari {
+  font-variant: small-caps;
 }
 .logo-sec {
 	background: #eff7ec none repeat scroll 0 0;
@@ -33,11 +38,18 @@
 }
 .discount-card h1 {
 	color: #f2f2f2;
-	font-size: 27px;
+	font-size: 23px;
 	font-weight: 700;
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
+}
+.discount-card.reach-card > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.discount-card.reach-card {
+  padding: 5px 15px;
 }
 .inpt-flds {
 	padding: 20px 20px 10px;
@@ -91,6 +103,11 @@
 	font-weight: 300;
 }
 /* select plceholder */
+
+
+
+
+
 .info input {
 	background: transparent none repeat scroll 0 0;
 	border-color: #ddd;
@@ -202,15 +219,30 @@
   width: 100%;
 }
 
-.terms {
-  background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;
+.terms-gh {
+  background: rgba(0, 0, 0, 0) url("../images/reach-footer-logo.png") no-repeat scroll 97% center;
+  float: left;
+  margin: 0;
+  padding: 10px 20px;
+   box-sizing: border-box;
+   width:100%;
+}.terms-bz {
+  /*background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center;*/
   float: left;
   margin: 0;
   padding: 10px 20px;
    box-sizing: border-box;
    width:100%;
 }
-.terms li {
+.terms {
+/*   background: rgba(0, 0, 0, 0) url("../images/footer-logo.png") no-repeat scroll 97% center; */
+  float: left;
+  margin: 0;
+  padding: 10px 20px;
+   box-sizing: border-box;
+   width:100%;
+}
+.terms li, .terms-gh li, .terms-bz li {
   background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
   color: #404854;
   font-size: 12px;
@@ -274,26 +306,84 @@
 .U-info {
   box-sizing: border-box;
   float: left;
-  padding: 20px;
+  padding: 15px 20px;
+  width: 100%;
+}
+.U-info.Rx-info {
+  padding: 6px 20px;
+}
+.U-info .information {
+  float: left;
+  width: 20%;
+}
+.U-info.Rx-info .information {
+  float: left;
   width: 100%;
 }
 .information {
   float: left;
-  width: 20%;
+  width: 100%;
 }
 .information span {
   color: #666;
   float: left;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
-  width: 100%;
+  width: 50%;
   color:#7c8087;
 }
-.information label {
+.U-info.Rx-info .information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
+  width: auto;
+}
+.U-info.Rx-info .information span {
+  color: #7c8087;
   float: left;
   font-size: 14px;
+  font-style: italic;
+  width: 50%;
+}
+.U-info .information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
   width: 100%;
-    color:#02142a;
+}
+.U-info .information span {
+  color: #7c8087;
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  width: 100%;
+}
+.information label {
+  color: #02142a;
+  float: left;
+  font-size: 15px;
+  padding-right: 30px;
+}
+.rx-services {
+  display: block;
+  float: left;
+  margin: 0;
+  padding-left: 9px;
+  text-align: left;
+  width: 31%;
+}
+.rx-services > li {
+  background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 4px;
+  color: #757575;
+  font-size: 13px;
+  line-height: 15px;
+  list-style: outside none none;
+  margin-bottom: 5px;
+  padding-left: 12px;
+  text-transform: none;
+}
+.save-up.rx.reach {
+  padding: 6px 15px;
 }
 .Help {
   color: #26559e;
@@ -361,61 +451,72 @@
 }
 .reach-terms li {
   line-height: 14px !important;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+}
+.rx-services > li {
+  font-weight: 400;
+}
+.reach-terms li:last-child {
+  margin-bottom: 0;
 }
 .reach-terms {
+/*
   background: rgba(0, 0, 0, 0) url("../images/reach-footer-logo.png") no-repeat scroll 97% center;
   float: left;
+*/
   margin: 0;
   padding: 10px 20px;
    box-sizing: border-box;
    width:100%;
 }
 .terms li {
-  background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
+  background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 5px;
   color: #404854;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 19px;
   list-style: outside none none;
   padding-left: 15px;
 }
-
-/* Dashd Border
-------------------------------- */
-/*
-
-.card-wrap::before {
-    content: url("../images/icon-scissor.png");
-    left: 45px;
-    opacity: 0.6;
-    position: absolute;
-    top: -28px;
+.help {
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  float: left;
+  padding: 7px 20px;
+  width: 100%;
 }
-*/
-
-.card-wrap {
-    border: 2px dashed gray;
-    border-radius: 15px;
-	background: rgba(0, 0, 0, 0) url('../images/back-scissor.png') no-repeat center;
-    margin: 100px auto;
-    margin-bottom: 20px;
-    padding: 50px 30px 30px;
-    margin-top: 30px;
-    position: relative;
-    width: 716px;
-    z-index: 99;
+.Rparts > h1 {
+  color: #26559e;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  text-align: right;
 }
-.card-wrap .H-card.Rx-card {
-    margin: 0 auto;
+.Lparts {
+  float: left;
+  width: 50%;
 }
-.card-wrap .card-buttons button {
-    margin-bottom: 0;
+.Rparts {
+  float: right;
+  width: 50%;
 }
-
-/* Dashd Border Ends
-------------------------------- */
-
-
+.Lparts .information span {
+  color: #7c8087;
+  float: left;
+  font-size: 13px;
+  font-style: italic;
+  width: 100%;
+}
+.Lparts .information label {
+  font-size: 14px;
+  width: 50%;
+}
+.Lparts .information {
+  float: left;
+  width: 30%;
+}
+.Lparts .information:first-child {
+  width: 38%;
+}
 @media only screen and (max-width: 1199px) {
 .inpt-flds::before {
 	background: rgba(0, 0, 0, 0) url("../images/start_here.png") no-repeat scroll 0 0 / 100% auto;
@@ -475,6 +576,7 @@
 	margin-top: 0;
 	padding-left: 0;
 }
+
 .info {
   float: left;
   margin-top: 6px;
@@ -505,6 +607,10 @@
 .terms li {
     background: rgba(0, 0, 0, 0) url("../images/list-icon.png") no-repeat scroll 0 6px;
  }
+ .U-info.Rx-info .information {
+  float: left;
+  width: 100%;
+}
  .information {
   margin-bottom: 15px;
   width: 100%;
@@ -524,32 +630,35 @@
   width: 100%;
     font-size:22px;
 }
+.U-info .information {
+  float: left;
+  width: 100%;
+}
 .information label {
   font-size: 20px;
-  width: 30%;
+  width: 100%;
 }
 .information span {
   width: 70%;
   font-size: 18px;
 }
-/* Dashd Border
-------------------------------- */
-.card-wrap::before {
-	display: none;
+.Lparts {
+  float: left;
+  width: 100%;
 }
-.card-wrap {
-    border: 0;
-    margin: 100px auto;
-    padding:0;
-    position: relative;
-    width: 100%;
+.Rparts {
+  float: right;
+  width: 100%;
 }
-.card-wrap .card-buttons button {
-    margin-bottom: 15px;
+.rx-services {
+  width: 100%;
+  margin:0px;
+  box-sizing: border-box;
 }
-
-/* Dashd Border Ends
-------------------------------- */
+.rx-services > li {
+  font-size: 15px;
+  line-height: 30px;
+}
 
 }
 @media only screen and (max-width: 635px) {
@@ -589,6 +698,9 @@
 }
 .card-buttons {
    width: 92%;
+}
+.discount-card h1 {
+  font-size: 17px;
 }
 }
 
@@ -630,5 +742,11 @@
 .information span {
   width: 50%;
   font-size: 16px;
+}
+.Rparts > h1 {
+  font-size: 13px;
+}
+.U-info.Rx-info .information label {
+  padding-right: 20px;
 }
 }

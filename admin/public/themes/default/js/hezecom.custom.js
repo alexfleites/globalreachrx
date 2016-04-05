@@ -40,16 +40,41 @@ $(document).ready(function() {
 	$('a[data-confirm]').click(function(ev) {
 		var href = $(this).attr('href');
 		if (!$('#dataConfirmModal').length) {
-			$('body').append('<div id="dataConfirmModal" class="modal fade" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">Please Confirm</h3></div><div class="modal-body"></div><div class="modal-footer"><a class="btn btn-success" id="dataConfirmOK">Confirm</a><button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancel</button></div></div></div></div>');
+			$('body').append('<div id="dataConfirmModal" class="modal fade" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel" class="dataConfirmLabel">Please Confirm</h3></div><div class="modal-body"></div><div class="modal-footer"><a class="btn btn-success dataConfirmOK" id="dataConfirmOK">Confirm</a><button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancel</button></div></div></div></div>');
 		} 
+		$('#dataConfirmModal').find('.dataConfirmLabel').text('Please Confirm');
+		$('#dataConfirmModal').find('.dataConfirmOK').text('Confirm');
 		$('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
 		$('#dataConfirmOK').attr('href', href);
 		$('#dataConfirmModal').modal({show:true});
 		return false;
 	});
+
+	$('a[data-email]').click(function(ev) {
+		var href = $(this).attr('href');
+		if (!$('#dataConfirmModal').length) {
+			$('body').append('<div id="dataConfirmModal" class="modal fade" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel" class="dataConfirmLabel">Email List To</h3></div><div class="modal-body"></div><div class="modal-footer"><a class="btn btn-success dataConfirmOK" id="dataConfirmOK">Send</a><button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Cancel</button></div></div></div></div>');
+		} 
+		$('#dataConfirmModal').find('.dataConfirmLabel').text('Email List To');
+		$('#dataConfirmModal').find('.dataConfirmOK').text('Send');
+		$('#dataConfirmModal').find('.modal-body').html("<input type='email' id='email-list' class='form-control styler'>");
+		$('#dataConfirmOK').attr('href', 'javascript:;');
+		$('#dataConfirmOK').attr('onclick', 'email_List("'+href+'")');
+		$('#dataConfirmModal').modal({show:true});
+		return false;
+	});
 });
 
-
+function email_List(url){
+	email = $('input#email-list').val();
+	if(email == ''){
+		alert('Please enter email address!!!');
+	}else{
+		email = email.replace('@', '%40');
+		url += "&email=" + email;
+		$('#dataConfirmOK').attr('href', url);
+	}
+}
 //MULTI FIELDS
 var startingNo = -1;
 	var $node = "";
@@ -95,7 +120,7 @@ var startingNo = -1;
 		$.ajax({
 			type: 'POST',
 			url: '../mailcard.php',
-			data: {pid:$('input#pid').val()},
+			data: {pid:$('input#pid').val(),site:$('input#site').val()},
 			success: function(data){
 				$('#hEmailButton').removeAttr('disabled');
 				if(data.indexOf('success') == -1){
